@@ -1,7 +1,7 @@
 {
   "name": "pebble-picto",
   "author": "MakeAwesomeHappen",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "keywords": ["pebble-app"],
   "private": true,
   "dependencies": {},
@@ -10,7 +10,7 @@
     "uuid": "48c687ab-7b77-490c-81ba-402f253dd5ea",
     "sdkVersion": "3",
     "enableMultiJS": true,
-    "targetPlatforms": ["gabbro", "chalk"],
+    "targetPlatforms": ["gabbro", "chalk", "emery"],
     "watchapp": {
       "watchface": true
     },

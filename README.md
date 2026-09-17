@@ -1,21 +1,22 @@
 # pebble-picto
 
-A minimalist Picto-inspired Pebble watchface for **Gabbro (Pebble Round 2)**
-and **Chalk (Pebble Time Round)**.
+A minimalist Picto-inspired Pebble watchface for **Gabbro (Pebble Round 2)**,
+**Chalk (Pebble Time Round)**, and **Emery (Pebble Time 2)**.
 The black hand shows minutes; the orbiting black dot shows hours.
 
 ## Building & running
 
 ```sh
-pebble build                          # builds Gabbro and Chalk watchfaces
-pebble install --emulator chalk       # install on the Chalk emulator
+pebble build                          # builds Gabbro, Chalk, and Emery
+pebble install --emulator emery       # install on the Emery emulator
 pebble install --phone <ip>           # install to a paired phone
 ```
 
 ## Target platforms
 
-This watchface targets **Gabbro** and **Chalk**. Each platform has a dedicated
-profile for face dimensions and colours while sharing the same rendering code.
+This watchface targets **Gabbro**, **Chalk**, and **Emery**. Each platform has
+a dedicated profile for face dimensions and colours while sharing the same
+rendering code. Emery uses its rectangular screen as a 200 × 200 design area.
 
 ## Project layout
 

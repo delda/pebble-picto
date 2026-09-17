@@ -20,8 +20,19 @@ static const FaceConfig s_face_config = {
   .background_color = GColorWhite,
   .foreground_color = GColorBlack,
 };
+#elif defined(PBL_PLATFORM_EMERY)
+static const FaceConfig s_face_config = {
+  // Emery's rectangular face uses a 200 x 200 design area. Scale each Gabbro
+  // dimension by 200 / 260 to retain the same visual proportions.
+  .minute_hand_length = 82,
+  .minute_hand_width = 15,
+  .hour_dot_radius = 85,
+  .hour_dot_size = 9,
+  .background_color = GColorWhite,
+  .foreground_color = GColorBlack,
+};
 #else
-#error "This watchface supports only Gabbro and Chalk."
+#error "This watchface supports only Gabbro, Chalk, and Emery."
 #endif
 
 const FaceConfig *face_config_get(void) {
