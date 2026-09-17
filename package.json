@@ -10,7 +10,7 @@
     "uuid": "48c687ab-7b77-490c-81ba-402f253dd5ea",
     "sdkVersion": "3",
     "enableMultiJS": true,
-    "targetPlatforms": ["gabbro"],
+    "targetPlatforms": ["gabbro", "chalk"],
     "watchapp": {
       "watchface": true
     },

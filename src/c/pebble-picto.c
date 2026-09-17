@@ -5,14 +5,15 @@
 
 static Window *s_window;
 static Layer *s_face_layer;
+static const FaceConfig *s_face_config;
 
 static void prv_face_update_proc(Layer *layer, GContext *ctx) {
   const GRect bounds = layer_get_bounds(layer);
   const time_t now = time(NULL);
   const struct tm *tick_time = localtime(&now);
-  const FaceState state = face_logic_create_state(bounds, tick_time);
+  const FaceState state = face_logic_create_state(bounds, tick_time, s_face_config);
 
-  face_renderer_draw(ctx, &state);
+  face_renderer_draw(ctx, &state, s_face_config);
 }
 
 static void prv_tick_handler(struct tm *tick_time, TimeUnits units_changed) {
@@ -34,7 +35,8 @@ static void prv_window_unload(Window *window) {
 
 static void prv_init(void) {
   s_window = window_create();
-  window_set_background_color(s_window, GColorWhite);
+  s_face_config = face_config_get();
+  window_set_background_color(s_window, s_face_config->background_color);
   window_set_window_handlers(s_window, (WindowHandlers) {
     .load = prv_window_load,
     .unload = prv_window_unload,

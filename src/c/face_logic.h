@@ -2,6 +2,8 @@
 
 #include <pebble.h>
 
+#include "face_config.h"
+
 typedef struct {
   GRect bounds;
   GPoint centre;
@@ -10,4 +12,5 @@ typedef struct {
 } FaceState;
 
 // Converts the current time into the geometry the face needs to display.
-FaceState face_logic_create_state(GRect bounds, const struct tm *time);
+FaceState face_logic_create_state(GRect bounds, const struct tm *time,
+                                  const FaceConfig *config);

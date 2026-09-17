@@ -1,20 +1,21 @@
 # pebble-picto
 
-A minimalist Picto-inspired Pebble watchface for **Gabbro (Pebble Round 2)**.
+A minimalist Picto-inspired Pebble watchface for **Gabbro (Pebble Round 2)**
+and **Chalk (Pebble Time Round)**.
 The black hand shows minutes; the orbiting black dot shows hours.
 
 ## Building & running
 
 ```sh
-pebble build                          # builds the Gabbro watchface
-pebble install --emulator gabbro      # install on the Gabbro emulator
+pebble build                          # builds Gabbro and Chalk watchfaces
+pebble install --emulator chalk       # install on the Chalk emulator
 pebble install --phone <ip>           # install to a paired phone
 ```
 
-## Target platform
+## Target platforms
 
-This watchface targets **Gabbro** only, whose 180 × 180 circular display is
-used by the face geometry.
+This watchface targets **Gabbro** and **Chalk**. Each platform has a dedicated
+profile for face dimensions and colours while sharing the same rendering code.
 
 ## Project layout
 
